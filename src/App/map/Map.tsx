@@ -34,9 +34,14 @@ function Map({ width, height, data }: MapProps) {
     })
   return (
     <div className="p-4">
-      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+      <button
+        className="px-3 py-1.5 bg-blue-500 rounded-lg text-white"
+        onClick={() => setCount((count) => count + 1)}
+      >
+        count is {count}
+      </button>
       <h1 className="text-3xl font-bold underline text-red-900">Vite + React/TS = EruptionJS</h1>
-      <p className="read-the-docs">Click on the Vite, React and Eruption logos to learn more</p>
+      <p className="text-gray-700">Click on the Vite, React and Eruption logos to learn more</p>
       <svg width={width} height={height}>
         {allSvgPaths}
       </svg>

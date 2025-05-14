@@ -1,5 +1,6 @@
-/* Tailwind 4 */
-@import url('tailwindcss');
+/* stylelint-disable */
+@import 'tailwindcss';
+/* stylelint-enable */
 
 html,
 body {

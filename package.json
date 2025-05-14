@@ -39,10 +39,10 @@
     "commit": "commit"
   },
   "engines": {
-    "node": ">=20.12.0",
+    "node": "!^x",
     "npm": "!^x",
     "yarn": "!^x",
-    "pnpm": ">=9.0.5",
+    "pnpm": "!^x",
     "bun": "^1.2.x"
   },
   "dependencies": {
