@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import * as d3 from 'd3'
 import { type FeatureCollection } from 'geojson'
 
@@ -8,6 +10,7 @@ interface MapProps {
 }
 
 function Map({ width, height, data }: MapProps) {
+  const [count, setCount] = useState(0)
   const projection = d3
     .geoMercator()
     .scale(width / 2 / Math.PI - 40)
@@ -30,8 +33,9 @@ function Map({ width, height, data }: MapProps) {
       )
     })
   return (
-    <div className="card">
-      <h1 className="text-3xl font-bold underline">Vite + React/TS = EruptionJS</h1>
+    <div className="p-4">
+      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+      <h1 className="text-3xl font-bold underline text-red-900">Vite + React/TS = EruptionJS</h1>
       <p className="read-the-docs">Click on the Vite, React and Eruption logos to learn more</p>
       <svg width={width} height={height}>
         {allSvgPaths}
