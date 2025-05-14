@@ -46,12 +46,10 @@
     "bun": "^1.2.x"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.6",
     "d3": "^7.9.0",
     "d3-geo": "^3.1.1",
     "react": "^19.x",
-    "react-dom": "^19.x",
-    "tailwindcss": "^4.1.6"
+    "react-dom": "^19.x"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.x",
@@ -59,6 +57,7 @@
     "@commitlint/prompt-cli": "^19.x",
     "@commitlint/types": "^19.x",
     "@eruptionjs/config": "^0.6.1",
+    "@tailwindcss/vite": "^4.1.6",
     "@testing-library/jest-dom": "^6.x",
     "@testing-library/react": "^16.x",
     "@testing-library/user-event": "^14.x",
@@ -80,6 +79,7 @@
     "prettier": "^3.x",
     "stylelint": "^16.x",
     "stylelint-config-standard": "^37.x",
+    "tailwindcss": "^4.1.6",
     "typescript": "^5.x",
     "vite": "^6.x",
     "vite-bundle-visualizer": "^1.x",
