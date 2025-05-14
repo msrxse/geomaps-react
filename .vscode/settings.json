@@ -3,6 +3,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.fontSize": 14,
   // auto format code
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,

@@ -46,8 +46,12 @@
     "bun": "^1.2.x"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.6",
+    "d3": "^7.9.0",
+    "d3-geo": "^3.1.1",
     "react": "^19.x",
-    "react-dom": "^19.x"
+    "react-dom": "^19.x",
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.x",
@@ -59,6 +63,8 @@
     "@testing-library/react": "^16.x",
     "@testing-library/user-event": "^14.x",
     "@types/bun": "^1.x",
+    "@types/d3": "^7.4.3",
+    "@types/geojson": "^7946.0.16",
     "@types/react": "^19.x",
     "@types/react-dom": "^19.x",
     "@vitejs/plugin-react-swc": "^3.x",

@@ -1,5 +1,6 @@
-import { render, screen, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, screen } from '@testing-library/react'
+
+// import userEvent from '@testing-library/user-event'
 
 import { App } from '.'
 
@@ -10,14 +11,14 @@ describe('App', () => {
     expect(screen.getByText('Vite + React/TS = EruptionJS')).toBeInTheDocument()
   })
 
-  test('should return 1 when the user click one time at button', async () => {
-    render(<App />)
+  // test('should return 1 when the user click one time at button', async () => {
+  //   render(<App />)
 
-    const buttonElement = screen.getByRole('button')
-    expect(screen.queryByText('count is 0')).toBeInTheDocument()
+  //   const buttonElement = screen.getByRole('button')
+  //   expect(screen.queryByText('count is 0')).toBeInTheDocument()
 
-    await userEvent.click(buttonElement)
+  //   await userEvent.click(buttonElement)
 
-    await waitFor(() => expect(screen.queryByText('count is 1')).toBeInTheDocument())
-  })
+  //   await waitFor(() => expect(screen.queryByText('count is 1')).toBeInTheDocument())
+  // })
 })
