@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import * as d3 from 'd3'
 import { type FeatureCollection } from 'geojson'
@@ -11,27 +11,36 @@ interface MapProps {
 
 function Map({ width, height, data }: MapProps) {
   const [count, setCount] = useState(0)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
   const projection = d3
     .geoMercator()
     .scale(width / 2 / Math.PI - 40)
     .center([10, 35])
 
-  const geoPathGenerator = d3.geoPath().projection(projection)
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const context = canvas?.getContext('2d')
+    if (!context) {
+      return
+    }
 
-  const allSvgPaths = data.features
-    .filter((shape) => shape.id !== 'ATA')
-    .map((shape) => {
-      return (
-        <path
-          key={shape.id}
-          d={geoPathGenerator(shape) as string | undefined}
-          stroke="lightGrey"
-          strokeWidth={0.5}
-          fill="grey"
-          fillOpacity={0.7}
-        />
-      )
-    })
+    // If the context is provided, geoPath() understands that we work with canvas, not SVG
+    const geoPathGenerator = d3.geoPath().projection(projection).context(context)
+
+    context.clearRect(0, 0, width, height)
+    context.beginPath()
+
+    geoPathGenerator(data)
+
+    context.fillStyle = 'grey'
+    context.fill()
+
+    context.strokeStyle = 'lightGrey'
+    context.lineWidth = 0.1
+    context.stroke()
+  }, [data, height, projection, width])
+
   return (
     <div className="p-4">
       <button
@@ -44,9 +53,7 @@ function Map({ width, height, data }: MapProps) {
         Vite + React/TS = EruptionJS
       </h1>
       <p className="text-gray-700">Click on the Vite, React and Eruption logos to learn more</p>
-      <svg width={width} height={height}>
-        {allSvgPaths}
-      </svg>
+      <canvas ref={canvasRef} width={width} height={height} />
     </div>
   )
 }
