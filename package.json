@@ -84,7 +84,7 @@
     "prettier": "^3.x",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "^16.x",
-    "stylelint-config-standard": "^37.x",
+    "stylelint-config-standard": "^38.x",
     "tailwindcss": "^4.1.6",
     "typescript": "^5.x",
     "vite": "^6.x",
