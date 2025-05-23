@@ -1,0 +1,10 @@
+Usage: topo2geo [options] <name=file>…
+
+Converts TopoJSON objects to GeoJSON features.
+
+Options:
+  -V, --version            output the version number
+  -i, --in <file>          input topology file name; defaults to “-” for stdin (default: "-")
+  -l, --list               list the object names on the input topology
+  -n, --newline-delimited  output newline-delimited JSON
+  -h, --help               output usage information
