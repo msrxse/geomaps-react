@@ -80,7 +80,7 @@
     "husky": "^9.x",
     "lint-staged": "^15.x",
     "msw": "^2.x",
-    "npm-check-updates": "^17.x",
+    "npm-check-updates": "^18.x",
     "prettier": "^3.x",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "^16.x",
